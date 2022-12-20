@@ -38,7 +38,7 @@ const canisterEnvVariables = initCanisterEnv();
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
-const frontendDirectory = "dynamic_opengraph_frontend";
+const frontendDirectory = "frontend";
 
 const frontend_entry = path.join("src", frontendDirectory, "src", "index.html");
 
@@ -99,8 +99,9 @@ module.exports = {
         {
           from: `src/${frontendDirectory}/src/.ic-assets.json*`,
           to: ".ic-assets.json5",
-          noErrorOnMissing: true
+          noErrorOnMissing: true,
         },
+        { from: `src/${frontendDirectory}/assets`, to: "./" },
       ],
     }),
   ],
