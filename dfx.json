@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "dynamic_opengraph_backend": {
+      "main": "src/dynamic_opengraph_backend/main.mo",
+      "type": "motoko"
+    },
+    "dynamic_opengraph_frontend": {
+      "dependencies": [
+        "dynamic_opengraph_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/dynamic_opengraph_frontend/src/index.html"
+      },
+      "source": [
+        "src/dynamic_opengraph_frontend/assets",
+        "dist/dynamic_opengraph_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
